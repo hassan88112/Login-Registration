@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	>
+
+<title>Home page</title>
+</head>
+<body style="background-color:#f0f1f2;"> 
+
+	<!-- Navbar -->
+	
+	 <div th:if=${session.msg}>
+		<div class="alert alert-success" role="alert" th:text="${session.msg}">
+		</div>
+		<th:block th:text="${#session.removeAttribute('msg')}"></th:block>
+	</div>
+	
+	<nav class="navbar-dark bg-primary">
+	<div class="text-center">
+	<a  class="navbar-brand" href="#">Vision</a>
+	</div>	
+	</nav>
+	
+	 
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="text-center text-primary">Welcome to our Website Vision</h4><br><br>
+                          
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
